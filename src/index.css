@@ -1,13 +1,158 @@
+    /* @font-face {
+        font-family: IRANSansX;
+        font-style: normal;
+        font-weight: 700;
+        src: url("../public/fonts/Woff/IRANSansXFaNum-Bold.woff") format("woff"),
+            url("../public/fonts/Woff2/IRANSansXFaNum-Bold.woff2") format("woff2");
+    }
+
+    @font-face {
+        font-family: IRANSansX;
+        font-style: normal;
+        font-weight: 400;
+        src: url("../public/fonts/Woff/IRANSansXFaNum-Regular.woff") format("woff"),
+            url("../public/fonts/Woff2/IRANSansXFaNum-Regular.woff2") format("woff2");
+    } */
+
+/* -------------------------------- */
+/* Base styles */
+/* -------------------------------- */
 body {
+  font-family: IRANSansX;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color:var(--bg--primary) !important;
+  font-size: 14px !important;
+  color: var(--text-primary-cl);
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* line-height: 1.5;
+  min-height: 100vh; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+
+.container-base {
+  width: 1380px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1380px) {
+  .container-base {
+    width: 96%;
+  }
+}
+
+img{
+  width: 100%;
+  display: block
+  }
+
+  a {
+     color: #000;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+
+  input,
+  button,
+  textarea,
+  select {
+    font-family: inherit;
+  }
+
+  /* remove animation form people who've turned them off */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after{
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* -------------------------------- */
+  /* Utility Classes */
+  /* -------------------------------- */
+
+   
+.flex{
+  display: flex;
+  gap: var(--gap,1rem) 
+}
+.grid {
+  display: grid;
+  gap: var(--gap,1rem);
+}
+
+.sr-readonly {
+ abcolute: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 0.5em black; 
+}
+
+.content-readonly{
+  position:absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.box{
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+/* .bg-dark{
+  background-color: hsl(var(--cl--dark));
+} */
+.bg-light{
+  background-color: hsl(var(--cl--light));
+}
+.bg-primary{
+  background-color: hsl(var(--cl--primary));
+}
+/* .text-dark{
+  color: hsl(var(--cl--dark));
+} */
+.text-light{
+  color: var(--cl--light);
+}
+.text-primary{
+  color: var(--cl--primary);
 }
