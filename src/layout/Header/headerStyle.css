@@ -62,6 +62,10 @@ a {
   max-height: 0;
   transition: max-height .2s ease-out;
 }
+.header .menu li.home a {
+    color:var(--cl--primary);
+    font-weight:700;
+}
 
 /* menu icon */
 

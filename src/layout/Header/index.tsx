@@ -15,17 +15,17 @@ function Header() {
           <img src="/images/header/search.svg" alt="search" />
         </div>
         <ul className="menu">
-          <li>
-            <a href="#dont">خانه</a>
+          <li className="home">
+            <a href="/">خانه</a>
           </li>
           <li>
-            <a href="#forget">بلاک</a>
+            <a href="/">بلاک</a>
           </li>
           <li>
-            <a href="#forget">داستان ما</a>
+            <a href="/">داستان ما</a>
           </li>
           <li>
-            <a href="#forget">تماس با ما</a>
+            <a href="/">تماس با ما</a>
           </li>
         </ul>
         <div className="profile-menu">
